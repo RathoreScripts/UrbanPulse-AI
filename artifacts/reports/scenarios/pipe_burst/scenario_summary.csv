@@ -1,0 +1,2 @@
+scenario,status,minimum_zone_pressure_m,maximum_zone_pressure_m,average_zone_pressure_m,lowest_pressure_node,lowest_pressure_time_hours,minimum_tank_level_m,maximum_tank_level_m,maximum_absolute_flow_m3s
+pipe_burst,SUCCESS,1.314,6.281,3.81,Z2,22.0,4.393,5.306,0.003456

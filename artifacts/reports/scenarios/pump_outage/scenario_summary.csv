@@ -1,0 +1,2 @@
+scenario,status,minimum_zone_pressure_m,maximum_zone_pressure_m,average_zone_pressure_m,lowest_pressure_node,lowest_pressure_time_hours,minimum_tank_level_m,maximum_tank_level_m,maximum_absolute_flow_m3s
+pump_outage,SUCCESS,-0.009,5.998,2.935,Z2,18.0,3.05,5.0,0.003625

@@ -1,0 +1,187 @@
+
+network:
+  name: "UrbanPulse AI Virtual Campus Network"
+  network_type: "conceptual_ring_main"
+  data_type: "synthetic_assumption"
+
+nodes:
+
+  - id: "RES1"
+    name: "Water Reservoir"
+    type: "reservoir"
+    x: 1
+    y: 5
+
+  - id: "PUMP1"
+    name: "Transfer Pump"
+    type: "pump"
+    x: 3
+    y: 5
+
+  - id: "TANK1"
+    name: "Overhead Tank"
+    type: "tank"
+    x: 5
+    y: 5
+
+  - id: "J1"
+    name: "Hostel Junction"
+    type: "junction"
+    x: 7
+    y: 8
+
+  - id: "J2"
+    name: "Academic Junction"
+    type: "junction"
+    x: 11
+    y: 8
+
+  - id: "J3"
+    name: "Canteen Junction"
+    type: "junction"
+    x: 13
+    y: 5
+
+  - id: "J4"
+    name: "Medical Junction"
+    type: "junction"
+    x: 11
+    y: 2
+
+  - id: "J5"
+    name: "Sports Junction"
+    type: "junction"
+    x: 7
+    y: 2
+
+  - id: "Z1"
+    name: "Hostel"
+    type: "demand_zone"
+    x: 8
+    y: 10
+    zone: "hostel"
+
+  - id: "Z2"
+    name: "Academic Block"
+    type: "demand_zone"
+    x: 13
+    y: 10
+    zone: "academic"
+
+  - id: "Z3"
+    name: "Canteen"
+    type: "demand_zone"
+    x: 15
+    y: 5
+    zone: "canteen"
+
+  - id: "Z4"
+    name: "Medical Facilities"
+    type: "demand_zone"
+    x: 13
+    y: 0
+    zone: "medical"
+
+  - id: "Z5"
+    name: "Sports / Common"
+    type: "demand_zone"
+    x: 5
+    y: 0
+    zone: "sports"
+
+pipes:
+
+  - id: "P01"
+    from: "RES1"
+    to: "PUMP1"
+    length_m: 100
+    diameter_mm: 150
+
+  - id: "P02"
+    from: "PUMP1"
+    to: "TANK1"
+    length_m: 150
+    diameter_mm: 150
+
+  - id: "P03"
+    from: "TANK1"
+    to: "J1"
+    length_m: 120
+    diameter_mm: 125
+
+  - id: "P04"
+    from: "J1"
+    to: "J2"
+    length_m: 180
+    diameter_mm: 100
+
+  - id: "P05"
+    from: "J2"
+    to: "J3"
+    length_m: 160
+    diameter_mm: 100
+
+  - id: "P06"
+    from: "J3"
+    to: "J4"
+    length_m: 180
+    diameter_mm: 100
+
+  - id: "P07"
+    from: "J4"
+    to: "J5"
+    length_m: 160
+    diameter_mm: 100
+
+  - id: "P08"
+    from: "J5"
+    to: "TANK1"
+    length_m: 150
+    diameter_mm: 125
+
+  - id: "P09"
+    from: "J1"
+    to: "J3"
+    length_m: 220
+    diameter_mm: 100
+
+  - id: "P10"
+    from: "J2"
+    to: "J4"
+    length_m: 200
+    diameter_mm: 100
+
+  - id: "P11"
+    from: "J1"
+    to: "Z1"
+    length_m: 80
+    diameter_mm: 80
+
+  - id: "P12"
+    from: "J2"
+    to: "Z2"
+    length_m: 90
+    diameter_mm: 80
+
+  - id: "P13"
+    from: "J3"
+    to: "Z3"
+    length_m: 70
+    diameter_mm: 80
+
+  - id: "P14"
+    from: "J4"
+    to: "Z4"
+    length_m: 60
+    diameter_mm: 80
+
+  - id: "P15"
+    from: "J5"
+    to: "Z5"
+    length_m: 100
+    diameter_mm: 80
+
+settings:
+  assumed_hazen_williams_c: 130
+  units: "metric"
+  simulation_type: "conceptual_network_only"

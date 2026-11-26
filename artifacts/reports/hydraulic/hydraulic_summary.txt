@@ -1,0 +1,32 @@
+============================================================
+                 URBANPULSE AI
+          HYDRAULIC SIMULATION REPORT
+============================================================
+
+SIMULATION INFORMATION
+------------------------------------------------------------
+Duration: 24 hours
+Solver: EPANET 2.2
+Dataset: Synthetic
+Network: Conceptual campus water network
+
+PRESSURE SUMMARY
+------------------------------------------------------------
+Minimum pressure: -0.000 m
+Maximum pressure: 9.515 m
+Average pressure: 5.680 m
+
+TANK LEVEL SUMMARY
+------------------------------------------------------------
+Minimum level: 5.000 m
+Maximum level: 7.516 m
+Average level: 6.488 m
+
+PIPE FLOW SUMMARY
+------------------------------------------------------------
+Maximum absolute flow: 0.003379 m3/s
+Maximum absolute velocity: 0.254925 m/s
+
+============================================================
+END OF REPORT
+============================================================

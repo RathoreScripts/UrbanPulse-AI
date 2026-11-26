@@ -1,0 +1,30 @@
+URBANPULSE AI - SCENARIO ANALYSIS
+=======================================================
+
+Dataset: Synthetic campus water demand
+Network: Conceptual campus water network
+Simulation: EPANET through WNTR
+
+KEY FINDINGS
+----------------------------------------
+Lowest minimum zone pressure: pump_outage (-0.009 m)
+Lowest tank level: pump_outage (3.050 m)
+Scenarios with negative simulated zone pressure: pump_outage
+
+SCENARIO COMPARISON
+----------------------------------------
+          scenario  minimum_zone_pressure_m  average_zone_pressure_m  minimum_tank_level_m  average_pressure_change_m              pressure_condition
+            normal                    1.995                    5.460                 5.000                      0.000 Positive pressure in simulation
+       peak_demand                    1.989                    4.825                 5.000                     -0.635 Positive pressure in simulation
+           drought                    1.995                    4.927                 5.000                     -0.533 Positive pressure in simulation
+           leakage                    1.988                    5.052                 5.000                     -0.408 Positive pressure in simulation
+        pipe_burst                    1.314                    3.810                 4.393                     -1.650 Positive pressure in simulation
+water_conservation                    1.997                    5.774                 5.000                      0.314 Positive pressure in simulation
+       pump_outage                   -0.009                    2.935                 3.050                     -2.525      Negative pressure observed
+
+MODELLING LIMITATIONS
+----------------------------------------
+All results depend on assumed network parameters and synthetic data.
+Leakage and burst are represented as additional junction discharge.
+Pressure adequacy must be assessed against verified design criteria.
+This is a decision-support simulation, not a real pump-control system.

@@ -1,0 +1,6 @@
+zone,predicted_demand_liters,allocated_water_liters,unmet_demand_liters,minimum_target_liters,allocation_percentage
+academic,43933.46,43160.63,772.8299999999999,13180.04,98.24
+canteen,18809.19,14343.89,4465.3,5642.74,76.26
+hostel,69154.83,69154.83,0.0,34577.39,100.0
+medical,4458.61,4458.61,0.0,2675.13,100.0
+sports,21905.65,14207.130000000001,7698.530000000001,2190.55,64.86

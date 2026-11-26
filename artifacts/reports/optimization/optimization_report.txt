@@ -1,0 +1,23 @@
+URBANPULSE AI - WATER OPTIMIZATION REPORT
+=======================================================
+
+Dataset: Synthetic AI demand forecast
+Method: Linear Programming using SciPy HiGHS
+Hours optimized: 24
+Zones: 5
+Total predicted demand: 158261.74 litres
+Total available supply: 192000.00 litres
+Total allocated water: 145325.09 litres
+Total unmet demand: 12936.66 litres
+Overall shortage: 8.17%
+
+ZONE-WISE SUMMARY
+    zone  predicted_demand_liters  allocated_water_liters  unmet_demand_liters  minimum_target_liters  allocation_percentage
+academic                 43933.46                43160.63               772.83               13180.04                  98.24
+ canteen                 18809.19                14343.89              4465.30                5642.74                  76.26
+  hostel                 69154.83                69154.83                 0.00               34577.39                 100.00
+ medical                  4458.61                 4458.61                 0.00                2675.13                 100.00
+  sports                 21905.65                14207.13              7698.53                2190.55                  64.86
+
+Supply and minimum allocation targets are project assumptions.
+Results are recommendations based on synthetic forecast data.

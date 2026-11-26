@@ -1,0 +1,40 @@
+URBANPULSE AI - FORECASTING REPORT
+=======================================================
+
+Dataset: Synthetic campus water demand
+Forecast horizon: Next 24 hours
+Models: Moving Average, Random Forest, Gradient Boosting
+Validation: Chronological 80/20 split
+
+MODEL COMPARISON
+----------------------------------------
+    zone             model      MAE     RMSE      R2
+  hostel    Moving Average 1060.217 1244.421 -0.0034
+  hostel     Random Forest  207.635  287.241  0.9465
+  hostel Gradient Boosting  222.746  299.364  0.9419
+academic    Moving Average  617.189  767.608  0.1658
+academic     Random Forest  112.911  161.726  0.9630
+academic Gradient Boosting  163.182  218.593  0.9323
+ canteen    Moving Average  336.331  413.029 -0.0013
+ canteen     Random Forest   62.200   84.675  0.9579
+ canteen Gradient Boosting   64.335   88.075  0.9545
+ medical    Moving Average   67.484   78.884 -0.0041
+ medical     Random Forest   13.807   18.280  0.9461
+ medical Gradient Boosting   14.069   18.933  0.9422
+  sports    Moving Average  336.577  389.815 -0.0036
+  sports     Random Forest   66.700   88.193  0.9486
+  sports Gradient Boosting   66.316   88.931  0.9478
+
+SELECTED MODEL PER ZONE
+----------------------------------------
+hostel: Random Forest
+academic: Random Forest
+canteen: Random Forest
+medical: Random Forest
+sports: Random Forest
+
+IMPORTANT LIMITATIONS
+----------------------------------------
+Forecasts are based on synthetic historical demand.
+They are not verified predictions of actual campus consumption.
+Recursive multi-step forecasts may accumulate prediction errors.

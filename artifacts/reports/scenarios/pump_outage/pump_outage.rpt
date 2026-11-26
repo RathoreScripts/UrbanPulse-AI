@@ -1,0 +1,62 @@
+  Page 1                                    Tue Nov 24 21:07:04 2026
+
+  ******************************************************************
+  *                           E P A N E T                          *
+  *                   Hydraulic and Water Quality                  *
+  *                   Analysis for Pipe Networks                   *
+  *                         Version 2.2                            *
+  ******************************************************************
+  
+   
+      Input Data File ................... C:\Users\hp\OneDrive\Desktop\UrbanPulse-AI\artifacts\reports\scenarios\pump_outage\pump_outage.inp
+      Number of Junctions................ 10
+      Number of Reservoirs............... 1
+      Number of Tanks ................... 1
+      Number of Pipes ................... 13
+      Number of Pumps ................... 1
+      Number of Valves .................. 0
+      Headloss Formula .................. Hazen-Williams
+      Nodal Demand Model ................ DDA
+      Hydraulic Timestep ................ 5.00 min
+      Hydraulic Accuracy ................ 0.001000
+      Status Check Frequency ............ 2
+      Maximum Trials Checked ............ 10
+      Damping Limit Threshold ........... 0.000000
+      Maximum Trials .................... 200
+      Quality Analysis .................. None
+      Specific Gravity .................. 1.00
+      Relative Kinematic Viscosity ...... 1.00
+      Relative Chemical Diffusivity ..... 1.00
+      Demand Multiplier ................. 1.00
+      Total Duration .................... 1440.00 min
+      Reporting Criteria:
+         No Nodes
+         No Links
+   
+  Analysis begun Tue Nov 24 21:07:04 2026
+
+  WARNING: Negative pressures at 17:15:00 hrs.
+   
+  WARNING: Negative pressures at 17:20:00 hrs.
+   
+  WARNING: Negative pressures at 17:25:00 hrs.
+   
+  WARNING: Negative pressures at 17:30:00 hrs.
+   
+  WARNING: Negative pressures at 17:31:15 hrs.
+   
+  WARNING: Negative pressures at 17:36:15 hrs.
+   
+  WARNING: Negative pressures at 17:41:15 hrs.
+   
+  WARNING: Negative pressures at 17:46:15 hrs.
+   
+  WARNING: Negative pressures at 17:51:15 hrs.
+   
+  WARNING: Negative pressures at 17:56:15 hrs.
+   
+  WARNING: Negative pressures at 18:00:00 hrs.
+   
+  WARNING: Negative pressures at 18:05:00 hrs.
+   
+  Analysis ended Tue Nov 24 21:07:04 2026

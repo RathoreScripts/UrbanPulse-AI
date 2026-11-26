@@ -1,0 +1,8 @@
+scenario,status,minimum_zone_pressure_m,maximum_zone_pressure_m,average_zone_pressure_m,lowest_pressure_node,lowest_pressure_time_hours,minimum_tank_level_m,maximum_tank_level_m,maximum_absolute_flow_m3s
+normal,SUCCESS,1.995,8.514,5.46,Z2,0.0,5.0,7.516,0.003379
+peak_demand,SUCCESS,1.989,7.166,4.825,Z2,0.0,5.0,6.171,0.003379
+drought,SUCCESS,1.995,7.482,4.927,Z2,0.0,5.0,6.484,0.002718
+leakage,SUCCESS,1.988,7.742,5.052,Z2,0.0,5.0,6.746,0.003379
+pipe_burst,SUCCESS,1.314,6.281,3.81,Z2,22.0,4.393,5.306,0.003456
+water_conservation,SUCCESS,1.997,9.187,5.774,Z2,0.0,5.0,8.189,0.003379
+pump_outage,SUCCESS,-0.009,5.998,2.935,Z2,18.0,3.05,5.0,0.003625

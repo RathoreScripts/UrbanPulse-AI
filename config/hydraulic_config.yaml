@@ -1,0 +1,57 @@
+
+simulation:
+  duration_hours: 24
+  hydraulic_timestep_seconds: 300
+  report_timestep_seconds: 3600
+
+units:
+  system: METRIC
+  flow: LPS
+  pressure: METERS
+
+hydraulics:
+  headloss: H-W
+  hazen_williams_roughness: 130
+
+reservoir:
+  node_id: RES1
+  base_head_m: 95
+
+tank:
+  node_id: TANK1
+  elevation_m: 100
+  initial_level_m: 5
+  minimum_level_m: 0
+  maximum_level_m: 10
+  diameter_m: 8
+
+pump:
+  link_id: PUMP1
+  power_kw: 7.46
+  turn_on_level_m: 3
+  turn_off_level_m: 9
+
+junction_elevations:
+  J1: 100
+  J2: 101
+  J3: 100
+  J4: 99
+  J5: 98
+
+zone_elevations:
+  Z1: 102
+  Z2: 103
+  Z3: 101
+  Z4: 100
+  Z5: 99
+
+demand_mapping:
+  hostel: Z1
+  academic: Z2
+  canteen: Z3
+  medical: Z4
+  sports: Z5
+
+
+
+

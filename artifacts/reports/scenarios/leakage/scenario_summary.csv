@@ -1,0 +1,2 @@
+scenario,status,minimum_zone_pressure_m,maximum_zone_pressure_m,average_zone_pressure_m,lowest_pressure_node,lowest_pressure_time_hours,minimum_tank_level_m,maximum_tank_level_m,maximum_absolute_flow_m3s
+leakage,SUCCESS,1.988,7.742,5.052,Z2,0.0,5.0,6.746,0.003379

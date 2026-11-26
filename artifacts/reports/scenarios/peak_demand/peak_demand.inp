@@ -1,0 +1,177 @@
+; Filename: C:\Users\hp\OneDrive\Desktop\UrbanPulse-AI\artifacts\reports\hydraulic\urbanpulse_run.inp
+; WNTR: 1.5.0
+; Created: 2026-11-24 21:07:03
+[TITLE]
+
+[JUNCTIONS]
+;ID                      Elevation       Demand Pattern                 
+ J1                               100               0                            ;
+ J2                               101               0                            ;
+ J3                               100               0                            ;
+ J4                                99               0                            ;
+ J5                                98               0                            ;
+ Z1                               102    1.1940728279 PAT_Z1                     ;
+ Z2                               103   0.60632139274 PAT_Z2                     ;
+ Z3                               101   0.33132826195 PAT_Z3                     ;
+ Z4                               100  0.077100922068 PAT_Z4                     ;
+ Z5                                99        0.373715 PAT_Z5                     ;
+
+[RESERVOIRS]
+;ID                                   Head                  Pattern
+ RES1                              95                            ;
+
+[TANKS]
+;ID                              Elevation           Init Level            Min Level            Max Level             Diameter           Min Volume Volume Curve         Overflow            
+ TANK1                            100               5               0              10               8               0                                             ;
+
+[PIPES]
+;ID                   Node1                Node2                              Length             Diameter            Roughness           Minor Loss               Status
+ P03                  TANK1                J1                               120             125             130               0                 Open   ;
+ P04                  J1                   J2                               180             100             130               0                 Open   ;
+ P05                  J2                   J3                               160             100             130               0                 Open   ;
+ P06                  J3                   J4                               180             100             130               0                 Open   ;
+ P07                  J4                   J5                               160             100             130               0                 Open   ;
+ P08                  J5                   TANK1                            150             125             130               0                 Open   ;
+ P09                  J1                   J3                               220             100             130               0                 Open   ;
+ P10                  J2                   J4                               200             100             130               0                 Open   ;
+ P11                  J1                   Z1                                80              80             130               0                 Open   ;
+ P12                  J2                   Z2                                90              80             130               0                 Open   ;
+ P13                  J3                   Z3                                70              80             130               0                 Open   ;
+ P14                  J4                   Z4                                60              80             130               0                 Open   ;
+ P15                  J5                   Z5                               100              80             130               0                 Open   ;
+
+[PUMPS]
+;ID                   Node1                Node2                Properties          
+ PUMP1                RES1                 TANK1                HEAD     PUMP_CURVE_1           ;
+
+[VALVES]
+;ID                   Node1                Node2                            Diameter Type              Setting           Minor Loss
+
+[TAGS]
+;type      name       tag       
+
+[DEMANDS]
+;ID        Demand     Pattern   
+
+[STATUS]
+;ID        Setting   
+
+[PATTERNS]
+;ID        Multipliers
+
+PAT_Z1 0.411651 0.347572 0.327842 0.313112 0.351839 0.531472
+PAT_Z1 0.880862 1.401108 1.582611 1.409789 1.226433 1.165045
+PAT_Z1 1.216881 1.171186 1.096635 1.036305 1.106012 1.291462
+PAT_Z1 1.520976 1.609698 1.454397 1.171293 0.811385 0.564433
+
+PAT_Z2 0.409960 0.351631 0.324430 0.319802 0.347830 0.521550
+PAT_Z2 0.876516 1.409270 1.580570 1.405040 1.218442 1.161170
+PAT_Z2 1.225163 1.154529 1.095960 1.056308 1.094370 1.277842
+PAT_Z2 1.503698 1.630432 1.472669 1.161587 0.831629 0.569601
+
+PAT_Z3 0.364388 0.312191 0.291884 0.280960 0.313540 0.467803
+PAT_Z3 0.773470 1.677341 1.908398 1.238808 1.089780 1.046432
+PAT_Z3 1.085707 1.418323 1.333066 0.949988 0.982280 1.136146
+PAT_Z3 1.363006 1.957857 1.727941 1.025302 0.732928 0.522462
+
+PAT_Z4 0.408941 0.351898 0.328090 0.318614 0.349633 0.525658
+PAT_Z4 0.875124 1.402412 1.552308 1.393829 1.212221 1.177104
+PAT_Z4 1.235376 1.157668 1.108829 1.046486 1.117218 1.281369
+PAT_Z4 1.505784 1.632327 1.454445 1.172420 0.814843 0.577402
+
+PAT_Z5 0.407699 0.353421 0.326924 0.313377 0.350229 0.530623
+PAT_Z5 0.879928 1.406874 1.564706 1.389700 1.221106 1.156936
+PAT_Z5 1.214810 1.166540 1.093919 1.039561 1.122728 1.287286
+PAT_Z5 1.532509 1.655118 1.443363 1.153482 0.812940 0.576220
+
+[CURVES]
+;ID         X-Value      Y-Value     
+;PUMP: PUMP_CURVE_1
+ PUMP_CURVE_1     0.000000    30.000000   ;
+ PUMP_CURVE_1     2.000000    20.000000   ;
+ PUMP_CURVE_1     4.000000     5.000000   ;
+
+
+[CONTROLS]
+Pump PUMP1 Closed IF Tank TANK1 above 9.0
+Pump PUMP1 Open IF Tank TANK1 below 3.0
+
+[RULES]
+
+[ENERGY]
+GLOBAL PRICE           0.0000
+
+[EMITTERS]
+;ID        Flow coefficient
+
+[QUALITY]
+
+[SOURCES]
+;Node      Type       Quality    Pattern   
+
+[REACTIONS]
+;Type           Pipe/Tank               Coefficient
+
+ ORDER BULK 1
+ ORDER TANK 1
+ ORDER WALL 1
+ GLOBAL BULK 0.0000    
+ GLOBAL WALL 0.0000    
+
+[MIXING]
+;Tank ID             Model Fraction
+
+[TIMES]
+DURATION             24:00:00
+HYDRAULIC TIMESTEP   00:05:00
+QUALITY TIMESTEP     00:06:00
+PATTERN TIMESTEP     01:00:00
+PATTERN START        00:00:00
+REPORT TIMESTEP      01:00:00
+REPORT START         00:00:00
+START CLOCKTIME      00:00:00 AM
+RULE TIMESTEP        00:06:00
+STATISTIC            NONE      
+
+[REPORT]
+
+[OPTIONS]
+UNITS                LPS                 
+HEADLOSS             H-W                 
+SPECIFIC GRAVITY     1
+VISCOSITY            1
+TRIALS               200
+ACCURACY             0.001
+CHECKFREQ            2
+MAXCHECK             10
+UNBALANCED           STOP                
+DEMAND MULTIPLIER    1
+EMITTER EXPONENT     0.5
+QUALITY              NONE                
+DIFFUSIVITY          1
+TOLERANCE            0.01
+
+[COORDINATES]
+;Node      X-Coord    Y-Coord   
+J1                  0.000000000          0.000000000
+J2                  0.000000000          0.000000000
+J3                  0.000000000          0.000000000
+J4                  0.000000000          0.000000000
+J5                  0.000000000          0.000000000
+Z1                  0.000000000          0.000000000
+Z2                  0.000000000          0.000000000
+Z3                  0.000000000          0.000000000
+Z4                  0.000000000          0.000000000
+Z5                  0.000000000          0.000000000
+RES1                0.000000000          0.000000000
+TANK1               0.000000000          0.000000000
+
+[VERTICES]
+;Link      X-Coord    Y-Coord   
+
+[LABELS]
+
+[BACKDROP]
+UNITS    NONE
+
+[END]

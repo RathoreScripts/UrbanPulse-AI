@@ -1,0 +1,27 @@
+
+optimization:
+  available_supply_liters: 8000
+
+  zones:
+    medical:
+      priority: 5
+      minimum_allocation_percentage: 0.60
+
+    hostel:
+      priority: 4
+      minimum_allocation_percentage: 0.50
+
+    academic:
+      priority: 3
+      minimum_allocation_percentage: 0.30
+
+    canteen:
+      priority: 2
+      minimum_allocation_percentage: 0.30
+
+    sports:
+      priority: 1
+      minimum_allocation_percentage: 0.10
+
+  output:
+    directory: artifacts/reports/optimization

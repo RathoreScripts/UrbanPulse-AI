@@ -1,0 +1,18 @@
+missing_columns: []
+missing_values: {'timestamp': 0, 'zone': 0, 'demand_liters': 0}
+duplicate_rows: 0
+duplicate_timestamp_zone: 0
+negative_demand: 0
+unknown_zones: []
+missing_zones: []
+invalid_timestamps: 0
+start_date: 2026-01-01 00:00:00
+end_date: 2026-03-31 23:00:00
+total_unique_timestamps: 2160
+expected_records: 10800
+actual_records: 10800
+record_count_correct: True
+non_numeric_demand: 0
+non_hourly_intervals: 0
+records_per_zone: {'academic': 2160, 'canteen': 2160, 'hostel': 2160, 'medical': 2160, 'sports': 2160}
+overall_status: PASS

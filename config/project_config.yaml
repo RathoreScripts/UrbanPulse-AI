@@ -1,0 +1,38 @@
+
+project:
+  name: "UrbanPulse AI"
+  version: "1.0.0"
+  description: "AI-powered campus water management digital twin"
+
+simulation:
+  days: 90
+  interval: "1h"
+  random_seed: 42
+
+campus:
+  name: "United University - Conceptual Campus"
+  data_type: "synthetic"
+
+zones:
+  hostel:
+    average_demand_lps: 0.93
+    priority: 3
+
+  academic:
+    average_demand_lps: 0.58
+    priority: 2
+
+  canteen:
+    average_demand_lps: 0.23
+    priority: 2
+
+  medical:
+    average_demand_lps: 0.06
+    priority: 5
+
+  sports:
+    average_demand_lps: 0.29
+    priority: 1
+
+output:
+  synthetic_data: "data/synthetic/campus_water_demand.csv"
