@@ -18,36 +18,36 @@ The system analyzes historical water consumption, forecasts future demand across
 
 🏗️ System Architecture
 
+```text
 Historical Water Consumption Data
-              |
-              v
-      Data Processing
-              |
-       +------+------+
-       |             |
-       v             v
- AI Demand       Hydraulic Network
- Forecasting       Simulation
-       |             |
-       +------+------+
-              |
-              v
-     Water Optimization
-              |
-              v
-       Scenario Analysis
-              |
-              v
-      Telemetry Simulator
-              |
-              v
-       FastAPI Backend
-              |
-              v
-       SQLite Database
-              |
-              v
-       Dash Dashboard
+                │
+                ▼
+         Data Processing
+                │
+        ┌───────┴───────┐
+        ▼               ▼
+   AI Demand     Hydraulic Network
+  Forecasting       Simulation
+        │               │
+        └───────┬───────┘
+                ▼
+       Water Optimization
+                │
+                ▼
+        Scenario Analysis
+                │
+                ▼
+       Telemetry Simulator
+                │
+                ▼
+         FastAPI Backend
+                │
+                ▼
+         SQLite Database
+                │
+                ▼
+         Dash Dashboard
+```
 
 🧠 Machine Learning
 
@@ -75,8 +75,9 @@ Database| SQLite
 Hydraulic Simulation| EPANET-based network simulation
 Version Control| Git, GitHub
 
-📂 Project Structure
+## 📂 Project Structure
 
+```text
 UrbanPulse/
 │
 ├── app.py
@@ -112,6 +113,7 @@ UrbanPulse/
 │
 └── src/
     └── urbanpulse/
+```
 
 ⚙️ Installation and Setup
 
